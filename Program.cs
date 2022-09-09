@@ -6,6 +6,7 @@
 string [] ArrayBegin = new string [3];
 string [] ArrayResult = new string [3];
 CompletionArray (ArrayBegin);
+Solution (ArrayBegin, ArrayResult);
 
 void CompletionArray (string [] ArrayBegin)
 {
@@ -19,5 +20,18 @@ void CompletionArray (string [] ArrayBegin)
     for (int i = 0; i < ArrayBegin.Length; i++)
     { 
     Console.WriteLine($"{i} элемент массива = {ArrayBegin[i]}");
+    }
+}
+
+void Solution (string [] ArrayBegin, string [] ArrayResult)
+{
+    int temp = 0;
+    for (int i = 0; i < ArrayBegin.Length; i++)
+    {    
+        if (ArrayBegin[i].Length <= 3)
+        {
+        ArrayResult[temp] = ArrayBegin[i];
+        temp++;
+        } 
     }
 }
