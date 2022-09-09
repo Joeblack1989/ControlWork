@@ -2,11 +2,14 @@
 равна 3 символам. Первоначальный массив можно ввести с клавиатуры, либо задать на старте выполнения алгоритма.
 При решении не рекомендуется пользоваться коллекциями, лучше обойтись исключительно массивами.
 */
-
+ 
 string [] ArrayBegin = new string [3];
 string [] ArrayResult = new string [3];
 CompletionArray (ArrayBegin);
 Solution (ArrayBegin, ArrayResult);
+Console.WriteLine();
+Print (ArrayResult);
+
 
 void CompletionArray (string [] ArrayBegin)
 {
@@ -33,5 +36,14 @@ void Solution (string [] ArrayBegin, string [] ArrayResult)
         ArrayResult[temp] = ArrayBegin[i];
         temp++;
         } 
+    }
+}
+
+void Print (string [] ArrayResult)
+{
+    Console.WriteLine("Результат: ");
+    for (int i = 0; i < ArrayResult.Length; i++)
+    {
+        Console.WriteLine($"{i} элемент массива = {ArrayResult[i]}");
     }
 }
